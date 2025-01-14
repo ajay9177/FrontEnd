@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>CSS Grid - Making Project Using CSS Grid</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div id="main">
+        <div id="left-top-left">
+            <div id="square"></div>
+        </div>
+
+        <div id="left-top-right">
+            <h4>Menu</h4>
+            <h5>Home Page</h5>
+            <h5>Our Supercars</h5>
+            <h5>Montage Highlights</h5>
+            <h5>Latest News</h5>
+            <h5>Contact Us</h5>
+        </div>
+
+        <div id="left-center">
+            <h1>Cars</h1>
+            <h1>Speed</h1>
+            <h1>Power</h1>
+            <h1>Class</h1>
+        </div>
+        <div id="left-bottom">
+            <p>Explore the world of supercars: sleek designs, roaring engines, unmatched speed, and power. Discover why they symbolize prestige in this thrilling montage.
+            </p>
+        </div>
+        <div id="right">
+            <video id="video" autoplay muted>
+                <source src="D:\Cars\DDE's Flame Spitting Aventador SVJ + Widebody Ferrari 488 [4K] (1080p).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="arrow">
+            <i class="ri-arrow-right-line"></i>
+        </div>
+    </div> 
+
+
+
+
+
+
+    <!-- Ignore the script part -->
+    <script>
+        const video = document.getElementById('video');
+        // Set start and end times
+        const startTime = 0; // Video starts at 0 seconds
+        const endTime = 170; // Video ends at 170 seconds (2:50)
+
+        // Start playing from the beginning
+        video.currentTime = startTime;
+
+        // Monitor the video time and reset to start when end time is reached
+        video.addEventListener('timeupdate', () => {
+            if (video.currentTime >= endTime) {
+                video.currentTime = startTime; // Restart from the beginning
+                video.play();
+            }
+        });
+    </script>
+</body>
+</html>
