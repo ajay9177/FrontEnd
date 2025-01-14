@@ -33,38 +33,11 @@
             </p>
         </div>
         <div id="right">
-            <video id="video" autoplay muted>
-                <source src="Lamborghini.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <video autoplay muted loop src="Lamborghini.mp4"></video>
         </div>
         <div id="arrow">
             <i class="ri-arrow-right-line"></i>
         </div>
     </div> 
-
-
-
-
-
-
-    <!-- Ignore the script part -->
-    <script>
-        const video = document.getElementById('video');
-        // Set start and end times
-        const startTime = 0; // Video starts at 0 seconds
-        const endTime = 170; // Video ends at 170 seconds (2:50)
-
-        // Start playing from the beginning
-        video.currentTime = startTime;
-
-        // Monitor the video time and reset to start when end time is reached
-        video.addEventListener('timeupdate', () => {
-            if (video.currentTime >= endTime) {
-                video.currentTime = startTime; // Restart from the beginning
-                video.play();
-            }
-        });
-    </script>
 </body>
 </html>
